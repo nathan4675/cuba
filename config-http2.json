@@ -14,9 +14,6 @@
         "network": "http",
         "security": "none",
         "httpSettings": {
-          "host": [
-            "YOUR_HOST"
-          ],
           "path": "/YOUR_PATH"
         }
       }
