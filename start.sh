@@ -27,7 +27,7 @@ cp /usr/local/share/xray/config-${STREAM_TYPE}.json /usr/local/share/xray/config
 if [ -z "${YOUR_PORT}"  ]; then
     YOUR_PORT=8080
 fi
-sed -i "s/YOUR_PORT/${YOUR_PORT}/g" /usr/local/share/xray/config.json && echo "Set PORT to /${YOUR_PORT}"
+sed -i "s/YOUR_PORT/${YOUR_PORT}/g" /usr/local/share/xray/config.json && echo "Set PORT to ${YOUR_PORT}"
 
 # Set UUID
 if [ -z ${YOUR_UUID} ]; then
@@ -42,7 +42,7 @@ fi
 
 case "${STREAM_TYPE}" in
     ws|http|http2|h2)
-        sed -i "s/YOUR_PATH/${YOUR_PATH}/g" /usr/local/share/xray/config.json && echo "Set PATH to ${YOUR_PATH}"
+        sed -i "s/YOUR_PATH/${YOUR_PATH}/g" /usr/local/share/xray/config.json && echo "Set PATH to /${YOUR_PATH}"
         ;;
     *)
         ;;
