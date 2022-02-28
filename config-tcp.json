@@ -1,0 +1,30 @@
+{
+  "inbounds": [
+    {
+      "port": "YOUR_PORT",
+      "protocol": "vmess",
+      "settings": {
+        "clients": [
+          {
+            "id": "YOUR_UUID"
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "none",
+        "tcpSettings": {
+        "header": {
+            "type": "none"
+          }
+        }
+      }
+    }
+  ],
+  "outbounds": [
+    {
+      "protocol": "freedom",
+      "settings": {}
+    }
+  ]
+}
