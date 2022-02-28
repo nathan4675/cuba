@@ -41,14 +41,7 @@ YOUR_PATH="${YOUR_UUID}-${STREAM_TYPE}"
 fi
 
 case "${STREAM_TYPE}" in
-    ws)
-        sed -i "s/YOUR_PATH/${YOUR_PATH}/g" /usr/local/share/xray/config.json && echo "Set PATH to ${YOUR_PATH}"
-        ;;
-    http|http2|h2)
-        if [ -z ${YOUR_HOST} ]; then
-            YOUR_HOST="www.one.com"
-        fi
-        sed -i "s/YOUR_HOST/${YOUR_HOST}/g" /usr/local/share/xray/config.json && echo "Set HOST to ${YOUR_HOST}"
+    ws|http|http2|h2)
         sed -i "s/YOUR_PATH/${YOUR_PATH}/g" /usr/local/share/xray/config.json && echo "Set PATH to ${YOUR_PATH}"
         ;;
     *)
